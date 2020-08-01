@@ -7,7 +7,7 @@ res = requests.get(url, headers = headers)
 soup = BeautifulSoup(res.content, 'html.parser') 
 data = soup.select('span.item_title') 
 i = 1
-f = open("/Users/deo/Desktop/GitRepository/Handsome-Tomato/tm-my-image-model/수익형웹,앱/검색순위.txt",'w',encoding="utf8")
+f = open("./검색순위.txt",'w',encoding="utf8")
 for item in data:
   print(str(i)+"위 : " + item.get_text())
   data = str(i)+"위 : " + item.get_text()+"\n"
